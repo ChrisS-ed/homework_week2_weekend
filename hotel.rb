@@ -33,7 +33,11 @@ class Hotel
         return
       end
     end
-    puts "Sorry, the hotel is full"
+    if room_type == "single"
+      puts "Sorry, no single rooms left"
+    else
+      puts "Sorry, no double rooms left"
+    end
   end
 
   def add_guests(guest1, guest2, room_type)
@@ -55,7 +59,7 @@ class Hotel
         return
       end
     end
-    puts "Sorry, the hotel is full"
+    puts "Sorry, no double rooms left"
   end
 
 end

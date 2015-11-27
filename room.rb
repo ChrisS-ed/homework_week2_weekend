@@ -1,5 +1,6 @@
 class Room
   attr_reader :room_no, :type, :occupants, :room_rate
+  attr_writer :occupants
 
   def initialize(options = {})
     @room_no = options[:room_no]

@@ -18,7 +18,7 @@ hotel1.add_room(new_room2)
 occupancy = hotel1.hotel_capacity
 puts "Total current occupancy for #{hotel1.name} is #{occupancy}"
 
-# add guests WHAT HAPPENS WITH TWO PEOPLE IN DOUBLE ROOM? - array for guests in room?
+# add guests for single and double rooms
 guest1 = Guest.new("Bob Smith")
 hotel1.add_guest(guest1, "single")
 
@@ -26,4 +26,12 @@ guest2 = Guest.new("Malcolm Johnston")
 guest3 = Guest.new("Sarah Johnston")
 hotel1.add_guests(guest2, guest3, "double")
 
-#binding.pry; ' '
+# let guests check out
+guest1.check_out(hotel1)
+guest3.check_out(hotel1)
+occupancy = hotel1.hotel_capacity
+puts "Total current occupancy for #{hotel1.name} is #{occupancy}"
+
+# report on occupancy and revenue
+
+binding.pry; ' '
