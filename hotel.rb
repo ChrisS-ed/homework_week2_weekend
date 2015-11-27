@@ -28,9 +28,13 @@ class Hotel
         @guests[guest.name] = guest
         room.fill(room)
         guest.check_in(room)
+        occupancy = hotel_capacity
+        puts "Guest added: current occupancy for #{@name} is #{occupancy}"
+        return
       end
     end
-     # binding.pry; ' '
+    puts "Sorry, the hotel is full"     
+    # binding.pry; ' '
   end
 
 end

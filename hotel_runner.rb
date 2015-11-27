@@ -21,8 +21,7 @@ puts "Total current occupancy for #{hotel1.name} is #{occupancy}"
 # add guests WHAT HAPPENS WITH TWO PEOPLE IN DOUBLE ROOM? - array for guests in room?
 guest1 = Guest.new("Bob Smith")
 hotel1.add_guest(guest1, "single")
-occupancy = hotel1.hotel_capacity
-puts "After adding a guest, total current occupancy for #{hotel1.name} is #{occupancy}"
+
 
 
 binding.pry; ' '
