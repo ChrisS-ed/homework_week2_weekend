@@ -4,12 +4,12 @@ class Room
   def initialize(options = {})
     @room_no = options[:room_no]
     @type = options[:type]
-    @occupants = options[:occupants] # make array for two guests in one room
+    @occupants = options[:occupants]
     @room_rate = options[:room_rate]
   end
 
-  def fill(room)
-    @occupants = 1
+  def fill(room, guest_no)
+    @occupants = guest_no
   end
 
 end
