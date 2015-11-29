@@ -4,7 +4,6 @@ class Hotel
   def initialize(hotel_name)
     @name = hotel_name
     @rooms = {}
-    # guests need name and room no, and checked_in status
     @guests = {}
   end
   

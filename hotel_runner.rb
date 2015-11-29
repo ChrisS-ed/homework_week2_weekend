@@ -38,4 +38,18 @@ report1 = Report.new(hotel1)
 report1.occupancy(hotel1)
 report1.revenue(hotel1)
 
+# multiple hotels
+hotel2 = Hotel.new("The Grand")
+hotel2.add_room(Room.new({room_no: 221, type: "single", occupants: 0, room_rate: 50}))
+hotel2.add_room(Room.new({room_no: 222, type: "single", occupants: 0, room_rate: 50}))
+hotel2.add_room(Room.new({room_no: 223, type: "single", occupants: 0, room_rate: 50}))
+hotel2.add_guest(Guest.new("Frank O'Brien"), "single")
+hotel2.add_guest(Guest.new("Clara Jacobs"), "single")
+hotel2.add_guest(Guest.new("Tony Tones"), "single")
+report2 = Report.new(hotel2)
+report1.occupancy(hotel1)
+report1.revenue(hotel1)
+report2.occupancy(hotel2)
+report2.revenue(hotel2)
+
 # binding.pry; ' '
