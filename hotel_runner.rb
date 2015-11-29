@@ -2,6 +2,7 @@ require "pry-byebug"
 require_relative "hotel"
 require_relative "room"
 require_relative "guest"
+require_relative "report"
 
 
 # create hotel
@@ -30,8 +31,11 @@ hotel1.add_guests(guest2, guest3, "double")
 guest1.check_out(hotel1)
 guest3.check_out(hotel1)
 occupancy = hotel1.hotel_capacity
-puts "Total current occupancy for #{hotel1.name} is #{occupancy}"
+puts "Two check-outs: current occupancy for #{hotel1.name} is #{occupancy}"
 
 # report on occupancy and revenue
+report1 = Report.new(hotel1)
+report1.occupancy(hotel1)
+report1.revenue(hotel1)
 
-binding.pry; ' '
+# binding.pry; ' '
